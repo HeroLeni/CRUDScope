@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUDScope – HTML MediaPanel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>CRUDScope – HTML MediaPanel</h1>
+    <p>Pequeño panel para crear, listar y gestionar tareas con contenido multimedia.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#crear-tarea">Crear</a></li>
+      <li><a href="#listado-tareas">Listado</a></li>
+      <li><a href="#multimedia">Multimedia</a></li>
+      <li><a href="#acerca-de">Acerca de</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section id="crear-tarea">
+      <h2>Crear tarea</h2>
+      <p>Completa el siguiente formulario para registrar una nueva tarea en el sistema.</p>
+
+      <form>
+        <div>
+          <label for="titulo">Título de la tarea:</label>
+          <input type="text" id="titulo" name="titulo" required>
+        </div>
+
+        <div>
+          <label for="descripcion">Descripción:</label>
+          <textarea id="descripcion" name="descripcion"></textarea>
+        </div>
+
+        <div>
+          <label for="prioridad">Prioridad (1–5):</label>
+          <input type="number" id="prioridad" name="prioridad" min="1" max="5">
+        </div>
+
+        <div>
+          <label for="fecha">Fecha de creación:</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div>
+          <label for="estado">Estado:</label>
+          <span><strong>Pendiente</strong>, En progreso, Completada.</span>
+        </div>
+
+        <button type="submit">Guardar tarea</button>
+      </form>
+
+      <p>
+        Este sistema sigue el modelo
+        <abbr title="Create, Read, Update, Delete">CRUD</abbr>
+        para el manejo de tareas.
+      </p>
+    </section>
+
+    <section id="listado-tareas">
+      <h2>Listado de tareas</h2>
+      <p>En esta sección se muestran algunas tareas de ejemplo registradas en el sistema.</p>
+
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Estado</th>
+            <th>Creación</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tarea 1</strong></td>
+            <td><mark>Pendiente</mark></td>
+            <td><time datetime="2025-12-02">2 de diciembre de 2025</time></td>
+            <td>
+              <button type="button">Actualizar</button>
+              <button type="button">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td><em>Tarea 2</em></td>
+            <td><u>En progreso</u></td>
+            <td><time datetime="2025-11-30">30 de noviembre de 2025</time></td>
+            <td>
+              <button type="button">Actualizar</button>
+              <a href="#eliminar-2">Eliminar</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Tarea 3</td>
+            <td>Completada</td>
+            <td><time datetime="2025-11-28">28 de noviembre de 2025</time></td>
+            <td>
+              <button type="button">Actualizar</button>
+              <button type="button">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Lista rápida de estados posibles:
+      </p>
+      <ul>
+        <li>Pendiente</li>
+        <li>En progreso</li>
+        <li>Completada</li>
+      </ul>
+
+      <p>
+        Pasos básicos para registrar una tarea:
+      </p>
+      <ol>
+        <li>Ingresar un título descriptivo.</li>
+        <li>Escribir una breve descripción.</li>
+        <li>Seleccionar prioridad y fecha de creación.</li>
+        <li>Guardar la tarea.</li>
+      </ol>
+    </section>
+
+    <section id="multimedia">
+      <h2>Multimedia del sistema</h2>
+      <p>En esta sección se muestra contenido multimedia relacionado con el uso del sistema.</p>
+
+      <article>
+        <h3>Imagen de ejemplo</h3>
+        <p>
+          La siguiente imagen ilustra una interfaz típica de un panel de tareas.
+        </p>
+        <img src="imagevideomusik/stelle.png"
+             alt="Captura de un panel de tareas en CRUDScope"
+             width="300">
+      </article>
+
+      <article>
+        <h3>Guía en audio</h3>
+        <audio controls>
+          <source src="imagevideomusik/01_Bob_Sinclar,_Steve_Edwards_World,_Hold_On_FISHER_Rework.mp3" type="audio/mpeg">
+          Tu navegador no soporta la etiqueta de audio.
+        </audio>
+      </article>
+
+      <article>
+        <h3>Demostración en video</h3>
+        <video controls width="400" poster="images/stelle.png">
+          <source src="imagevideomusik/burnice dancing.mp4" type="video/mp4">
+          Tu navegador no soporta la etiqueta de video.
+        </video>
+      </article>
+    </section>
+
+    <section id="acerca-de">
+      <h2>Acerca de CRUDScope</h2>
+      <p>
+        <span>CRUDScope – HTML MediaPanel</span> es una maqueta en HTML que
+        practica el uso de etiquetas semánticas, formularios, tablas y multimedia.
+      </p>
+      <p>
+        El objetivo principal es entender la diferencia entre etiquetas semánticas y no semánticas,
+        así como su impacto en la estructura del documento.
+      </p>
+    </section>
+
+    <aside>
+      <h3>Tips y ayuda</h3>
+      <p><strong>Tip:</strong> Usa encabezados de>h1</code>–de>h3</code> en orden jerárquico para mejorar la accesibilidad.</p>
+      <p><em>Recuerda:</em> las etiquetas semánticas ayudan a los lectores de pantalla y a los motores de búsqueda.</p>
+      <p><mark>Nota:</mark> gracias a la etiqueta de>base</code>, los enlaces relativos se resuelven respecto a la URL definida.</p>
+      <p>Ejemplo de enlace externo afectado por &lt;base&gt;:
+        <a href="documentacion/html">Documentación HTML</a>
+      </p>
+    </aside>
+
+  </main>
+
+  <footer>
+    <h2>Contacto</h2>
+    <p>Información del autor y del proyecto.</p>
+    <address>
+      Desarrollado por Nombre del Autor<br>
+      Correo: <a href="mailto:autor@ejemplo.com">autor@ejemplo.com</a><br>
+      Sitio web: <a href="https://ejemplo.com/portfolio">Portafolio</a><br>
+      Año: <time datetime="2025">2025</time>
+    </address>
+  </footer>
+
+</body>
+</html>
